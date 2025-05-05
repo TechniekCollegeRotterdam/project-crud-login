@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `client` (
 --
 
 INSERT INTO `client` (`id`, `first_name`, `last_name`, `email`, `adress`, `zipcode`, `city`, `state`, `country`, `telephone`, `isadmin`, `pswrd`) VALUES
-(0, 'Dummy', 'Klant', 'NietBestaand@nowhere.org', 'Geen adres 000', '9999 XX', 'Niet Bestaand', 'Voor bestellingen verwijderde klanten', 157, 'HOOFDKANTOOR', 'N', ''),
+(0, 'Dummy', 'Klant', 'NietBestaand@nowhere.org', 'Geen adres 000', '9999 XX', 'Niet Bestaand', 'Voor bestellingen verwijderde klanten', 157, 'HOOFDKANTOOR', 'N', ' '),
 (1, 'Addison', 'Hacun', 'ahacun0@gravatar.com', '6 Milwaukee Plaza', '37217', 'Witzenhausen', 'Hessen', 83, '731-190-6635', 'N', ''),
 (2, 'Bartholomeo', 'Paddock', 'bpaddock1@walmart.com', '3600 Pond Trail', 'M14', 'Manchester', 'England', 235, '497-381-8562', 'N', ''),
 (3, 'Willette', 'Dunning', 'wdunning2@jigsy.com', '5 Walton Way', '3324', 'Dordrecht', 'Provincie Zuid-Holland', 157, '414-244-3587', 'N', ''),

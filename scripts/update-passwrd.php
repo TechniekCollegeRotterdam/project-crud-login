@@ -19,7 +19,7 @@
             try 
             {
                 $updPaswrd = $db->prepare("UPDATE client SET pswrd = :clpwd  WHERE pswrd IS NULL");
-                $updPaswrd->bindValue("clpwd", $hashedpw);
+                $updPaswrd->bindValue(":clpwd", $hashedpw);
                 $updPaswrd->execute();
 
                 header('refresh:5; url=../index.php'); 
