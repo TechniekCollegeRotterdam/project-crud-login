@@ -14,7 +14,7 @@
 	<!-- Initialisatie van variabelen -->
     <section>
     <?php 
-        require_once("dbconnect.php");
+        require_once("../dbconnect.php");
         $currentday = date('Y-m-d');
         $startingday = date('Y-m-d', strtotime($currentday.' - 1899 days'));
         $loopdate = $startingday;

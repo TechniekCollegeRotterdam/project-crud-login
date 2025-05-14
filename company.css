@@ -118,6 +118,11 @@ li.frstlvl > a {
   margin-left: 20px;
 }
 
+.tbodyflex {
+  display: flex;
+  border: none;
+  justify-content:center;
+}
 .spacebelowabove
 {
   margin: 2vh auto;
@@ -146,5 +151,11 @@ li.frstlvl > a {
 {
   text-align: center;
 }
-/*
- */
+  
+.centering 
+{
+  width: 80vw;
+  margin: 20px auto;
+  text-align: center;
+}
+

@@ -22,9 +22,9 @@
 		$oStmt = $db->prepare($sQuery);
 		$oStmt->execute();
 
-		echo "<h2 class='centering'>Overzicht leveranciers</h2>";
+		echo "<p>&nbsp;</p><h2 class='centercell'>Overzicht leveranciers</h2><p>&nbsp;</p>";
 		if ($oStmt->rowCount() > 0) {
-			echo '<table class="tabledisp2">';
+			echo '<div class="centerflex"><table class="tabledisp2">';
 			echo '<thead>';
 			echo '<td>Lev.nr.</td>';
 			echo '<td>Lev.naam</td>';
@@ -43,7 +43,7 @@
 				echo '<td>' . $aRow['city'] . '</td>';
 				echo '</tr>';
 			}
-			echo '</table>';
+			echo '</table></div>';
 		} else {
 			echo 'Helaas, geen gegevens bekend';
 		}
