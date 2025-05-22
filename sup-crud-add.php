@@ -8,10 +8,13 @@
 
 <body>
     <?php
+        session_start();
         // controleren of de gebruiker afkomt van het leverancier selectie scherm
         // Dat weet je doordat hij dan daar de submit knop heeft ingedrukt
-        if (!isset($_POST["submt-sel-supp-add"]) )
+        // OF doordat de session variabele in het adding programma is aangemaakt en op "true" gezet
+        if (!isset($_POST["submt-sel-supp-add"]))
         {
+            if ((isset($_SESSION["chk_supp_insert"]) && $_SESSION["chk_supp_insert"]))
             header("Refresh: 4, url=sup-crud-get.php");
             echo "<h2>Je bent hier niet op de juiste manier gekomen!</h2>";
             exit();
@@ -39,7 +42,7 @@
                 <input type="text" name="supp_streetaddress">
             </fieldset>
             <fieldset class="tbodyflex">
-                <label for="supp_streetnr">Adres leverancier : </label>
+                <label for="supp_streetnr">Huisnummer leverancier : </label>
                 <input type="text" name="supp_streetnr" >
             </fieldset>
             <fieldset class="tbodyflex">
@@ -72,7 +75,7 @@
         Bij het openen van het programma is het aanleverende programma vastgelegd in variabele $return_prog -->
             <fieldset class="tbodyflex, spacebelowabove">
                 <button type="submit" formaction="sup-crud-get.php">Breek af</button>&nbsp;&nbsp;
-                <input type="submit" value="Verwerk" name="supp_applyupdate">
+                <input type="submit" value="Verwerk" name="supp_applyinsert">
             </fieldset>
         </form>
     </main>
