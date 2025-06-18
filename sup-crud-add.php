@@ -14,10 +14,14 @@
         // OF doordat de session variabele in het adding programma is aangemaakt en op "true" gezet
         if (!isset($_POST["submt-sel-supp-add"]))
         {
+            echo "Niet van submt-sel-supp-add <br>";
             if ((isset($_SESSION["chk_supp_insert"]) && $_SESSION["chk_supp_insert"]))
-            header("Refresh: 4, url=sup-crud-get.php");
-            echo "<h2>Je bent hier niet op de juiste manier gekomen!</h2>";
-            exit();
+            {
+                echo "Bestaat session:X".isset($_SESSION["chk_supp_insert"]);
+                header("Refresh: 4, url=sup-crud-get.php");
+                echo "<h2>Je bent hier niet op de juiste manier gekomen!</h2>";
+                exit();
+            }
         }
         // Zet standaard header op de pagina.
         echo "<header class='spacebelowabove'>";
