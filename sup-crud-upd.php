@@ -122,7 +122,35 @@
             </fieldset>
             <fieldset class="tbodyflex">
                 <label for="supp_country">Land : </label>
-                <input type="number" name="supp_country" required value="<?php echo $dataSupplier["countryid"]; ?>" >
+                <select name="supp_country" required>
+                    <?php
+                        require_once "dbconnect.php";
+                        try {
+                            $sQuery2 = "SELECT * FROM country";
+                            $oStmt2 = $db->prepare($sQuery2);
+                            $oStmt2->execute();
+
+                                while ($aCountry = $oStmt2->fetch(PDO::FETCH_ASSOC)) {
+                                    if ($dataSupplier["countryid"] == $aCountry['idcountry'])
+                                    {
+                                        echo '<option value="'.$aCountry['idcountry'].'" selected>'.$aCountry['name'].'</option>';
+                                    }
+                                    else
+                                    {
+                                        echo '<option value="'.$aCountry['idcountry'].'">'.$aCountry['name'].'</option>';
+                                    }
+                                }
+                        } catch (PDOException $e) {
+                            $sMsg = '<p> 
+                                        Regelnummer: ' . $e->getLine() . '<br /> 
+                                        Bestand: ' . $e->getFile() . '<br /> 
+                                        Foutmelding: ' . $e->getMessage() . ' 
+                                    </p>';
+
+                            trigger_error($sMsg);
+                        }
+                    ?>
+                </select>
             </fieldset>
             <fieldset class="tbodyflex">
                 <label for="supp_teleph">Telefoon : </label>
