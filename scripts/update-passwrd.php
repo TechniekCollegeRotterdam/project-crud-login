@@ -18,7 +18,7 @@
             #2 Verwijderen gegevens in de database
             try 
             {
-                $updPaswrd = $db->prepare("UPDATE client SET pswrd = :clpwd  WHERE pswrd IS NULL");
+                $updPaswrd = $db->prepare("UPDATE client SET pswrd = :clpwd  WHERE id <> 0");
                 $updPaswrd->bindValue(":clpwd", $hashedpw);
                 $updPaswrd->execute();
 

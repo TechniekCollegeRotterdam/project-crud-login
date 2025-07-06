@@ -7,14 +7,10 @@
 </head>
 
 <body>
-	<header>
-		<h1>Welkom bij de Bread Company</h1>
-		<!-- hieronder wordt het menu opgehaald. -->
 		<?php
 			session_start(); 
 			include "nav.html";
 		?>
-	</header>
  
 	<!-- op de home pagina wat enthousiaste tekst over het bedrijf en de producten -->
  	<main>
