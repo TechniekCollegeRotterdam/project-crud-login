@@ -8,7 +8,6 @@
 
 <body>
 	<header class="spaceabovebelow">
-		<h1>Welkom bij de Bread Company</h1>
 		<!-- hieronder wordt het menu opgehaald. -->
 		<?php
 			session_start(); 

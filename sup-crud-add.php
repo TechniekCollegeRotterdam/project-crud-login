@@ -25,7 +25,6 @@
         }
         // Zet standaard header op de pagina.
         echo "<header class='spacebelowabove'>";
-		echo "<h1>Wijzig leverancier</h1>";
 		// hieronder wordt het menu opgehaald. -->
 			include "nav.html";
 	    echo "</header>";

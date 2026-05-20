@@ -107,7 +107,6 @@
 
             header("Refresh: 2, url=sup-crud-get.php");
             echo "<header class='spacebelowabove'>";
-            echo "<h1>Wijzig leverancier</h1>";
             // hieronder wordt het menu opgehaald. -->
                 include "nav.html";
     	    echo "</header>";
