@@ -32,7 +32,7 @@
 					echo '<div class="flexverticalcenter">';
 
 					// eerst een formulier met een knop om een nieuwe leverancier toe te voegen.
-					echo '<form action="sup-crud-add.php" method="post">';
+					echo '<form action=" " method="post">';
 					echo '  <label for="submt-sel-supp-add">Toevoegen leverancier &nbsp; </label>';
 					echo '  <input type="submit" value="Voeg toe" name="submt-sel-supp-add" >';
 					echo '</form>';
